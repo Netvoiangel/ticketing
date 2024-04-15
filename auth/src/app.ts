@@ -1,6 +1,5 @@
 import express from 'express'
 import { json } from 'body-parser'
-import 'express-async-errors';
 import cookieSession from 'cookie-session';
 
 import { currentUserRouter } from './routes/current-user';
