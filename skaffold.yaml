@@ -16,3 +16,12 @@ build:
         manual:
           - dest: .
             src: 'src/**/*.ts'
+    - image: w6itec6apel/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: .
+            src: '**/*.js'
+            
