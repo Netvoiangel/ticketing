@@ -19,6 +19,10 @@ Ticketing is a microservice application that allows users to register, log in, a
 
 The `auth` microservice is responsible for handling user registration, login, and logout functionality. It uses `jsonwebtoken` and `cookie-session` to manage user authentication and authorization.
 
+## Client Microservice 
+
+The `client` microservice displays the simplest window view for interacting with the authentication microservice.
+
 ### Running Tests
 
 To run the tests for the `auth` microservice, use the following command:
