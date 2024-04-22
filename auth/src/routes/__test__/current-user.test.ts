@@ -1,6 +1,5 @@
 import request from 'supertest';
 import { app } from '../../app';
-import { response } from 'express';
 import { signin } from '../../test/setup';
 
 it('response with detaild about the current user', async () => {

@@ -3,11 +3,8 @@ import 'express-async-errors';
 import { json } from 'body-parser'
 import cookieSession from 'cookie-session';
 
-import { errorHandler, NotFoundError } from '@wtickets/com';
-import { currentUserRouter } from './routes/current-user';
-import { signInRouter } from './routes/signin';
-import { signOutRouter } from './routes/signout';
-import { signUpRouter } from './routes/signup';
+import { errorHandler, NotFoundError, currentUser } from '@wtickets/com';
+import { createTicketRouter } from './routes/new';
 
 const app = express();
 app.set('trust proxy', true);
@@ -18,10 +15,8 @@ app.use(cookieSession({
     })
 );
 
-app.use(currentUserRouter);
-app.use(signInRouter);
-app.use(signOutRouter);
-app.use(signUpRouter);
+app.use(currentUser);
+app.use(createTicketRouter);
 
 app.all('*', async (req, res) => {
     throw new NotFoundError();

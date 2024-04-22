@@ -3,8 +3,7 @@ import { body } from 'express-validator';
 import { Password } from '../services/password';
 import jwt from 'jsonwebtoken';
 
-import { validateRequest } from '../middlewares/validate-request';
-import { BadRequestError } from '../errors/bad-request-error';
+import { validateRequest, BadRequestError } from '@wtickets/com';
 
 import { User } from '../models/user';
 
