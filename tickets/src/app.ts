@@ -7,7 +7,7 @@ import { errorHandler, NotFoundError, currentUser } from '@wtickets/com';
 
 import { createTicketRouter } from './routes/new';
 import { showTicketRouter } from './routes/show';
-import { indexTicketRouter } from './routes';
+import { indexTicketRouter } from './routes/index';
 import { updateTicketRouter } from './routes/update';
 
 
