@@ -48,4 +48,12 @@ build:
         manual:
           - dest: .
             src: 'src/**/*.ts'
+    - image: w6itec6apel/payments
+      context: payments
+      docker: 
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: .
+            src: 'src/**/*.ts'
             
