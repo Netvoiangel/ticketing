@@ -15,7 +15,9 @@ spec:
       containers:
         - name: client 
           image: w6itec6apel/client
-          imagePullPolicy: Always
+          env:
+            - name: ARCHITECTURE
+              value: linux/amd64
 
 ---
 apiVersion: v1
