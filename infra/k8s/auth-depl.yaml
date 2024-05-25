@@ -23,6 +23,7 @@ spec:
                   key: JWT_KEY
             - name: MONGO_URI
               value: 'mongodb://auth-mongo-srv:27017/auth'
+      imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
