@@ -15,6 +15,8 @@ spec:
       containers:
         - name: client 
           image: w6itec6apel/client
+          imagePullPolicy: Always
+
 ---
 apiVersion: v1
 kind: Service
