@@ -1,8 +1,8 @@
-FROM node:latest
+FROM node:alpine
 
 WORKDIR /app
 COPY package.json .
 RUN npm install --only=prod
 COPY . .
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
