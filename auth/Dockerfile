@@ -5,4 +5,4 @@ COPY package.json .
 RUN npm install --only=prod
 COPY . .
 
-CMD ["npm", "run", "start"]
+CMD ["ts-node-dev",  "src/index.ts"]
