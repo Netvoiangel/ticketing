@@ -29,5 +29,5 @@ jobs:
         with:
           push: true
           file: auth/Dockerfile
-          tags: w6itec6apel/auth
+          tags: w6itec6apel/auth:latest
           platforms: linux/amd64
