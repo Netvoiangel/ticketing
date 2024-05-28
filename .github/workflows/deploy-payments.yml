@@ -6,11 +6,15 @@ on:
       - main
     paths:
       - 'payments/**'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - 
+        name: Checkout code
+        uses: actions/checkout@v3
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -28,6 +32,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          file: payments/Dockerfile
+          context: ./payments
+          file: ./payments/Dockerfile
           tags: w6itec6apel/payments
-          platforms: linux/amd64
