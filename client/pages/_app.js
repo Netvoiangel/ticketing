@@ -22,7 +22,6 @@ AppComponent.getInitialProps = async (appContext) => {
 
     return {
         pageProps,
-        // currentUser: data.currentUser
         ...data
     }
 };
