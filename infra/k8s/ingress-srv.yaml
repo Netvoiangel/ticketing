@@ -32,3 +32,4 @@ spec:
       services:
         - name: client-srv
           port: 3000
+  tls: {}
