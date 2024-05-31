@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 
 const LandingPage = ({ currentUser, tickets }) => {
-    if (tickets !== null) {
+    if (tickets !== null || tickets !== undefined) {
         const ticketList = tickets.map((ticket) => {
             return (
                 <tr key={ticket.id}>
