@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-
 const LandingPage = ({ currentUser, tickets }) => {
     let ticketList = null;
     if (Array.isArray(tickets) && tickets.length > 0) {
