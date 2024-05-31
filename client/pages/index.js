@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 
 const LandingPage = ({ currentUser, tickets }) => {
-    const ticketList = [];
+    let ticketList = [];
     if (tickets.length > 0) {
         ticketList = tickets.map((ticket) => {
             return (
