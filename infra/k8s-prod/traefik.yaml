@@ -5,6 +5,7 @@ metadata:
 spec:
   entryPoints:
     - web
+    - websecure
   routes:
     - match: Host(`ticketing-ravil.dev`) && PathPrefix(`/api/payments`)
       kind: Rule
