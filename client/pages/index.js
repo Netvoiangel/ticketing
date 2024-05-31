@@ -3,21 +3,20 @@ import Link from 'next/link';
 
 const LandingPage = ({ currentUser, tickets }) => {
     let ticketList = null;
-    if (tickets && tickets.length > 0) {
-        console.log(typeof tickets, tickets.length)
-        // ticketList = tickets.map((ticket) => {
-        //     return (
-        //         <tr key={ticket.id}>
-        //             <td>{ticket.title}</td>
-        //             <td>{ticket.price}</td>
-        //             <td>
-        //                 <Link href="/tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
-        //                     View
-        //                 </Link>
-        //             </td>
-        //         </tr>
-        //     );
-        // });
+    if (Array.isArray(tickets) && tickets.length > 0) {
+        ticketList = tickets.map((ticket) => {
+            return (
+                <tr key={ticket.id}>
+                    <td>{ticket.title}</td>
+                    <td>{ticket.price}</td>
+                    <td>
+                        <Link href="/tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
+                            View
+                        </Link>
+                    </td>
+                </tr>
+            );
+        });
     }
 
     return (
