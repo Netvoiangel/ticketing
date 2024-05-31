@@ -34,4 +34,4 @@ jobs:
           push: true
           context: ./client
           file: ./client/Dockerfile
-          tags: w6itec6apel/client
+          tags: wernerravil/client
