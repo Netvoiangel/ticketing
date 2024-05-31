@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client 
-          image: w6itec6apel/client
+          image: wernerravil/client
 ---
 apiVersion: v1
 kind: Service
